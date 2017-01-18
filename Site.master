@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title><%: Page.Title %> - Къща за гости Егрека</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style>
+            body { background-color: sienna; }
+            img { border-radius: 50%; }
+    </style>
+
+</head>
+<body class="container">
+    <br />
+    <img src="cover.jpg" class="round" alt="Egreka" style="width:100%">
+
+    <form runat="server">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">ПРИЯТЕЛИ, ЗАПОВЯДАЙТЕ В КЪЩА ЗА ГОСТИ ЕГРЕКА. ЗА КОНТАКТИ: 0885125851 0879826381 e-mail afea_kirostefanov@abv.bg</a>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <br />
+            <footer style="background-color:forestgreen;color:saddlebrown">
+                <p>&copy; <%: DateTime.Now.Year %> - ВСИЧКИ ПРАВА ЗАПАЗЕНИ - ALL RIGHTS RESERVED - ВЛАДИМИР КРУМОВ ДИЗАЙН - GREEN BULGARIA - crumovlad@gmail.com</p>
+            </footer>
+        </div>
+    </form>
+    <br />
+
+    <center>
+
+    <div class="w3-content" style="max-width:100%;position:relative">
+
+
+    <img class="mySlides" src="pic (1).jpg" style="width:100%">
+    <img class="mySlides" src="pic (2).jpg" style="width:100%">
+    <img class="mySlides" src="pic (3).jpg" style="width:100%">
+    <img class="mySlides" src="pic (4).jpg" style="width:100%">
+    <img class="mySlides" src="pic (5).jpg" style="width:100%">
+    <img class="mySlides" src="pic (6).jpg" style="width:100%">
+    <img class="mySlides" src="pic (7).jpg" style="width:100%">
+    <img class="mySlides" src="pic (8).jpg" style="width:100%">
+    <img class="mySlides" src="pic (9).jpg" style="width:100%">
+    <img class="mySlides" src="pic (10).jpg" style="width:100%">
+    <img class="mySlides" src="pic (11).jpg" style="width:100%">
+    <img class="mySlides" src="pic (12).jpg" style="width:100%">
+    <img class="mySlides" src="pic (13).jpg" style="width:100%">
+    <img class="mySlides" src="pic (14).jpg" style="width:100%">
+    <img class="mySlides" src="pic (15).jpg" style="width:100%">
+    <img class="mySlides" src="pic (16).jpg" style="width:100%">
+    <img class="mySlides" src="pic (17).jpg" style="width:100%">
+    <img class="mySlides" src="pic (18).jpg" style="width:100%">
+    <img class="mySlides" src="pic (19).jpg" style="width:100%">
+    <img class="mySlides" src="pic (20).jpg" style="width:100%">
+    <img class="mySlides" src="pic (21).jpg" style="width:100%">
+    <img class="mySlides" src="pic (22).jpg" style="width:100%">
+    <img class="mySlides" src="pic (23).jpg" style="width:100%">
+    <img class="mySlides" src="pic (24).jpg" style="width:100%">
+    <img class="mySlides" src="pic (25).jpg" style="width:100%">
+    <img class="mySlides" src="pic (26).jpg" style="width:100%">
+    <img class="mySlides" src="pic (27).jpg" style="width:100%">
+    <img class="mySlides" src="pic (28).jpg" style="width:100%">
+    <img class="mySlides" src="pic (29).jpg" style="width:100%">
+    <img class="mySlides" src="pic (30).jpg" style="width:100%">
+    <img class="mySlides" src="pic (31).jpg" style="width:100%">
+    <img class="mySlides" src="pic (32).jpg" style="width:100%">
+    <img class="mySlides" src="pic (33).jpg" style="width:100%">
+    <img class="mySlides" src="pic (34).jpg" style="width:100%">
+    <img class="mySlides" src="pic (35).jpg" style="width:100%">
+    <img class="mySlides" src="pic (36).jpg" style="width:100%">
+
+        <a class="btn-floating" style="position:absolute;top:50%;left:0" onclick="plusDivs(-1)">❮❮❮❮❮</a>
+        <a class="btn-floating" style="position:absolute;top:50%;right:0" onclick="plusDivs(1)">❯❯❯❯❯</a>
+
+    </div>
+
+        <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) { showDivs(slideIndex += n); }
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+            </center>
+
+</body>
+</html>
